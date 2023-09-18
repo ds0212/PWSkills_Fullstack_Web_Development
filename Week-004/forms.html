@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Login Forms</h1>
+    <!-- Action is where to sumbit the information ex : ./login.jsp -->
+
+    <!--  Each of the field needs to have a name in order for the sumbission. -->
+    <form action="" method="">
+      <label for="username">Username</label>
+      <input type="text" placeholder="username" name="username" id="username" />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        placeholder="password"
+        name="password"
+        id="password"
+      />
+      <select name="" id="">
+        <option value="1">one</option>
+        <option value="2">two</option>
+        <option value="3">three</option>
+      </select>
+      <input type="color" name="" id="" />
+      <input type="file" name="" id="" />
+      <input type="radio" />
+      <input type="checkbox" />
+      <!-- Take the session data; during checkout process ; Similar request is coming again then block it. Django information-->
+      <input type="hidden" value="12sfef" name="sessiondata" />
+
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

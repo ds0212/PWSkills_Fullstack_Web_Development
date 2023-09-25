@@ -1,0 +1,7 @@
+/* External CSS (styles.css) */
+.external-style {
+  background-color: lightgreen;
+  border: 2px solid darkgreen;
+  padding: 10px;
+  margin: 10px;
+}

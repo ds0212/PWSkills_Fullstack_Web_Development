@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- More specificity = more wightage -->
+    <style>
+      /* .female {
+        color: red;
+      } */
+      .female {
+        /*010*/
+        color: blue;
+      }
+      #delhi .female {
+        /*110*/
+        color: red;
+      }
+      .ndls .female {
+        /*020*/
+        color: brown;
+      }
+      #bharat .ndls .female {
+        /*120*/
+        color: purple;
+      }
+
+      .Bharat #delhi .female {
+        /*120*/
+        color: orange;
+      }
+      .Bharat #delhi .female {
+        /*1120*/
+        color: orange !important ;
+      }
+      .Bharat .ndls .female {
+        /*030*/
+        color: cyan;
+      }
+      div h4 {
+        /*002*/
+        color: black;
+      }
+      h4.female {
+        /* 011*/
+        color: yellowgreen;
+      }
+      .Bharat #delhi h4.female {
+        /*121*/
+        /* color: orange; */
+        color: brown;
+      }
+      #bharat #delhi h4.female {
+        /*211*/
+        color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Bharat" id="bharat">
+      <h1>Gujarat</h1>
+      <div class="gujarat">
+        <div>
+          <h4 class="female">female</h4>
+          <h4 class="female">female</h4>
+          <h4 class="male">male</h4>
+          <h4 class="female">female</h4>
+          <h4 class="male">female</h4>
+        </div>
+        <h4 class="female">female</h4>
+        <h4 class="female">female</h4>
+      </div>
+      <h1>Maharashtra</h1>
+      <div class="maharashtra">
+        <h4 class="female">female</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">female</h4>
+      </div>
+      <h1>Delhi</h1>
+      <div id="delhi" class="ndls">
+        <h4 class="female">female</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">female</h4>
+      </div>
+    </div>
+  </body>
+</html>

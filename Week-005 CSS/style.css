@@ -1,0 +1,26 @@
+/* h1 {
+        color: burlywood;
+      } */
+img {
+  width: 500px;
+  height: 300px;
+}
+
+.title {
+  color: blueviolet;
+}
+
+.sub-title {
+  color: chocolate;
+}
+
+#pw-subtitle {
+  color: rgb(204, 59, 59);
+}
+
+.banner {
+  width: 500px;
+  height: 200px;
+  background-color: yellow;
+  background-image: url("https://miro.medium.com/v2/resize:fit:1100/format:webp/1*nZhHj6vcpoaKbYihX5mkSg.jpeg");
+}

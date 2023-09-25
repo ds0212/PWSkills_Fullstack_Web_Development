@@ -1,0 +1,110 @@
+<!-- Create a sign-up and sign-in form with proper validationa
+Ua Sign up form should have a first name, last name, email, password, confirm password, age, gender,
+and agree to terms and conditions fields at minimum (You can add any other if you like.
+<a Sign in form should have email, password fields
+
+
+NOTE: Validation is a must
+
+
+Ex: First name, last name, email cannot be less than 3 characters, age cannot be negative and cannot be
+greater than 150, fields are required, etc..,
+Assignment Question -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up and Sign In Forms</title>
+  </head>
+  <body>
+    <h1>Sign Up</h1>
+    <fieldset>
+    <form action="#" method="post">
+      <label for="firstName">First Name:</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        required
+        minlength="3"
+      /><br /><br />
+
+      <label for="lastName">Last Name:</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        required
+        minlength="3"
+      /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="6"
+      /><br /><br />
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        required
+        minlength="6"
+      /><br /><br />
+
+      <label for="age">Age:</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        required
+        min="0"
+        max="150"
+      /><br /><br />
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br /><br />
+
+      <input type="checkbox" id="agree" name="agree" required />
+      <label for="agree">I agree to the terms and conditions</label><br /><br />
+
+      <input type="submit" value="Sign Up" />
+    </fieldset>
+    </form>
+
+    <h1>Sign In</h1>
+    <form action="#" method="post">
+      <fieldset>
+      <label for="signInEmail">Email:</label>
+      <input
+        type="email"
+        id="signInEmail"
+        name="signInEmail"
+        required
+      /><br /><br />
+
+      <label for="signInPassword">Password:</label>
+      <input
+        type="password"
+        id="signInPassword"
+        name="signInPassword"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Sign In" />
+    </fieldset>
+    </form>
+  </body>
+</html>

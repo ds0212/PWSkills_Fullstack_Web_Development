@@ -1,0 +1,72 @@
+<!-- CSS Priority : Inline > Internal > External -->
+<!-- Browser(user agent) > CSS default > Custom CSS -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    /* * {
+      text-decoration: underline;
+      font-size: 10px;
+    }
+    .title {
+      color: red;
+    } */
+    .gujarat > .female {
+      color: coral;
+    }
+    .male {
+      color: #bbbddd;
+    }
+
+    .delhi .male {
+      color: rgb(255, 0, 0);
+    }
+  </style>
+
+  <body>
+    <h1>Gujarat</h1>
+    <div class="gujarat">
+      <div>
+        <h4 class="female">female</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">male</h4>
+        <h4 class="female">female</h4>
+        <h4 class="male">female</h4>
+      </div>
+      <h4 class="female">female</h4>
+      <h4 class="female">female</h4>
+    </div>
+    <h1>Maharashtra</h1>
+    <div class="maharashtra">
+      <h4 class="female">female</h4>
+      <h4 class="female">female</h4>
+      <h4 class="male">male</h4>
+      <h4 class="female">female</h4>
+      <h4 class="male">female</h4>
+    </div>
+    <h1>Delhi</h1>
+    <div class="delhi">
+      <h4 class="female">female</h4>
+      <h4 class="female">female</h4>
+      <h4 class="male">male</h4>
+      <h4 class="female">female</h4>
+      <h4 class="male">female</h4>
+    </div>
+    <h1 class="title" style="color: blue">Hello World!</h1>
+    <h1 id="pw-subtitle" class="sub-title">Dhrumil Sanghavi</h1>
+    <h1 id="" class="sub-title">Dhrumil Jain</h1>
+
+    <img
+      style="border-radius: 50%; border: 5px solid burlywood"
+      src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*nZhHj6vcpoaKbYihX5mkSg.jpeg"
+      alt=""
+    />
+    <div class="banner">Banner details</div>
+  </body>
+</html>

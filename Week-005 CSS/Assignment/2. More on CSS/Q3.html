@@ -1,0 +1,57 @@
+<!--  3.Create a navigation bar similar to question 1. For each navigation item, use a different border style. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        padding: 1rem;
+        background-color: cornflowerblue;
+      }
+      li {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 1rem;
+      }
+      a {
+        color: white;
+        /* font-size: 20px; */
+      }
+      a:hover {
+        color: moccasin;
+      }
+      #anchor1 {
+        border: 3px solid orange;
+      }
+      #anchor2 {
+        border: 3px solid white;
+      }
+      #anchor3 {
+        border: 3px solid lightgreen;
+      }
+      #anchor4 {
+        border: 3px solid blue;
+      }
+      #anchor5 {
+        border: 3px solid goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#" id="anchor1">Home</a></li>
+        <li><a href="#" id="anchor2">About Us</a></li>
+        <li><a href="#" id="anchor3">Contact</a></li>
+        <li><a href="#" id="anchor4">Blog</a></li>
+        <li><a href="#" id="anchor5">Login</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!--
+CSS Functions
+Transform
+Transition
+Animations
+Filters
+Webkit - ensuring new css3 properties supported by all the browsers.
+Developer Toolkit
+ -->
+<!-- CSS functions
+1. calc() 2. attr() 3. min() 4.max() 5.var() -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --body-bg-color: #ccc;
+        --content-bg-color: white;
+        --content-color: black;
+      }
+      .blue-theme {
+        --content-bg-color: blue;
+        --content-color: yellow;
+      }
+      .black-theme {
+        --content-bg-color: black;
+        --content-color: white;
+      }
+      .light-theme {
+        --content-bg-color: white;
+        --content-color: black;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        /* width: min(100vw, 1600px); */
+        width: max(1600px, 100vw);
+        height: 100vh;
+        /* background-color: #ccc; */
+        background-color: var(--content-bg-color);
+        color: var(--content-color);
+        box-sizing: border-box;
+        margin: auto;
+      }
+      .container a {
+        color: var(--content-color);
+      }
+      .leftBar {
+        width: 250px;
+        height: 100vh;
+        border: 2px solid var(--content-color);
+        /* background-color: yellow; */
+        display: inline-block;
+      }
+      .rightBar {
+        width: calc(100% - 250px);
+        height: 100vh;
+        /* background-color: orange; */
+        display: inline-block;
+        float: right;
+      }
+
+      .rightBar p a::after {
+        content: "(" attr(href) ")";
+        content: "(" attr(data-id) ")";
+      }
+    </style>
+  </head>
+  <body class="light-theme">
+    <div class="container">
+      <div class="leftBar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="rightBar">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Exercitationem ipsam nam doloribus quidem totam debitis corporis
+          laborum at fugiat eligendi illum sequi velit assumenda, nesciunt, sint
+          molestiae harum eos quae.
+          <a href="www.google.com" data-id="UID1313">Read more.</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

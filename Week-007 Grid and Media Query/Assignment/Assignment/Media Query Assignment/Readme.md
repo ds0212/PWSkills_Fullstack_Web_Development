@@ -20,17 +20,21 @@
 
 |                 Normal screen                  |                  485px screen                  |
 | :--------------------------------------------: | :--------------------------------------------: |
-| ![Question 1 Screenshot](Screenshots/Q3.1.png) | ![Question 1 Screenshot](Screenshots/Q3.2.png) |
+| ![Question 3 Screenshot](Screenshots/Q3.1.png) | ![Question 3 Screenshot](Screenshots/Q3.2.png) |
 
 <!-- ![Question 3 Screenshot](Screenshots/Q3.png) -->
 
 ## Question 4: Create a grid based layout containing four grid items which arranges them as the screen size changes.
 
+|                 Normal screen                  |                  490px screen                  |
+| :--------------------------------------------: | :--------------------------------------------: |
+| ![Question 4 Screenshot](Screenshots/Q4.1.png) | ![Question 4 Screenshot](Screenshots/Q4.2.png) |
+
 <!-- ![Question 4 Screenshot](Screenshots/Q4.png) -->
 
 ## Question 5: Create the below given layout using the flexbox in css, which should adapt itself on mobile screen as per given below output.
 
-|                 Normal screen                  |                  485px screen                  |
+|                 Normal screen                  |                  490px screen                  |
 | :--------------------------------------------: | :--------------------------------------------: |
 | ![Question 5 Screenshot](Screenshots/Q5.1.png) | ![Question 5 Screenshot](Screenshots/Q5.2.png) |
 

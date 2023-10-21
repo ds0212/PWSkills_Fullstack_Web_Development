@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --primarycolor: #00b7ff;
+        --secondarycolor: #6c757d;
+      }
+
+      button {
+        color: white;
+        font-size: 15px;
+        padding: 5px 15px;
+        border: none;
+        /* border: 2px solid white; */
+      }
+
+      .pbtn {
+        background-color: var(--primarycolor);
+      }
+      .sbtn {
+        background-color: var(--secondarycolor);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Explaining the Purpose of var() Function in CSS</h1>
+    <p>
+      The <code>var()</code> function in CSS is used for defining and using
+      custom properties, also known as CSS variables. These variables allows to
+      store and reuse values throughout your CSS code, making it more
+      maintainable and adaptable.
+    </p>
+
+    <p>
+      This makes CSS more dynamic and allows for easy theming, maintenance, and
+      consistency in your web design projects. It's particularly useful when you
+      need to manage color schemes, font sizes, spacing, or any other properties
+      that need to be consistent across your website.
+    </p>
+
+    <div class="container">
+      <div class="btn">
+        <button class="pbtn">Primary Button</button>
+
+        <button class="sbtn">Secondary Button</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -12,4 +12,4 @@
 | :--------------------------------------------: | :--------------------------------------------: |
 | ![Question 3 Screenshot](Screenshots/Q3.1.png) | ![Question 3 Screenshot](Screenshots/Q3.2.png) | -->
 
-<!-- ![Question 3 Screenshot](Screenshots/Q3.gif) -->
+![Question 3 Screenshot](Screenshots/Q3.gif)

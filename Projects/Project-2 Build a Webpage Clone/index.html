@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-image: url("./Assets/background-image.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Times New Roman", Times, serif;
+      }
+    </style>
+  </head>
+  <body
+    class="h-screen w-screen"
+    style="background: url(./Assets/background-image.png) center center/cover"
+  >
+    <!-- <div class="container flex w-screen flex-col"> -->
+    <nav class="ipdc flex justify-around m-6 items-center w-full">
+      <div class="logo flex flex-col py-3">
+        <img src="./Assets/website-logo.png" alt="" class="mx-3" />
+      </div>
+      <!-- <div class="flex w-full justify-evenly"> -->
+      <ul class="flex flex-row font-semibold text-lg gap-x-4 justify-center">
+        <li class="px-4">RETAIL</li>
+        <li class="px-4">SME</li>
+        <li class="px-4">CORPORATE</li>
+        <li class="px-4">ABOUT US</li>
+        <li class="px-4">COVID 19</li>
+        <li class="px-4">CAMPAIGNS</li>
+      </ul>
+      <!-- </div> -->
+      <div class="flex items-start">
+        <img src="./Assets/search-icon.png" alt="" class="px-4 py-3" />
+
+        <button
+          class="px-4 py-3 border bg-[#ed017f] text-white rounded-md text-center"
+        >
+          Services
+        </button>
+      </div>
+    </nav>
+    <main class="w-full flex relative">
+      <div class="w-6/12 flex flex-col px-8 justify-between pl-24">
+        <div class="mt-36">
+          <h1 class="text-7xl font-semibold">Chase Your Dream With Us</h1>
+          <p class="text-lg tracking-wide font-semibold text-gray-500 mt-8">
+            The harder you work for something, the<br />
+            greater you'll feel when you achieve it.
+          </p>
+        </div>
+        <div class="mt-8">
+          <button
+            class="border-2 border-solid border-[#ed017f] bg-[#ed017f] text-white text-sm px-6 py-3 rounded-md mr-3"
+          >
+            APPLY ONLINE
+          </button>
+          <button
+            class="border-2 border-solid border-[#ed017f] text-[#ed017f] py-3 px-6 text-sm rounded-md"
+          >
+            LOAN CALCULATOR
+          </button>
+        </div>
+        <div class="flex mt-44">
+          <div class="flex">
+            <img src="./Assets/phone.png" alt="Phone" class="mr-4" />
+            <p
+              class="inline text-gray-500 border-r-2 border-solid border-gray-500 pr-4 text-3xl"
+            >
+              1659
+            </p>
+          </div>
+          <div class="social-icons">
+            <img
+              class="inline-block mx-1"
+              src="./Assets/facebook.png"
+              alt="facebook"
+            />
+            <img
+              class="inline-block mx-1"
+              src="./Assets/youtube.png"
+              alt="youtube"
+            />
+            <img
+              class="inline-block mx-1"
+              src="./Assets/linkedin.png"
+              alt="linkedin"
+            />
+            <img
+              class="inline-block mx-1"
+              src="./Assets/instagram.png"
+              alt="Instagram"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="w-10/12 relative">
+        <img
+          src="./Assets/hero-image.png"
+          alt="hero image"
+          class="absolute -top-8 right-0 w-full"
+        />
+      </div>
+      <button
+        class="absolute flex items-center px-3 py-2 rounded-[30px] shadow-[0px_0px_15px_1px] shadow-gray-500 left-1/2 -translate-x-1/2 bg-white"
+      >
+        <img src="./Assets/car.png" alt="car" />
+        <p class="ml-2 font-semibold text-gray-500">Car Loan</p>
+      </button>
+      <button
+        class="absolute flex items-center px-3 py-2 rounded-[30px] shadow-[0px_0px_15px_1px] shadow-gray-500 right-36 top-36 bg-white"
+      >
+        <img src="./Assets/House.png" alt="car" />
+        <p class="ml-2 font-semibold text-gray-500">Home Loan</p>
+      </button>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tailwind CSS Accordion</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+  </head>
+  <body>
+    <article class="mt-6 h-5/6 flex flex-col space-y-4 overflow-auto">
+      <details class="font-normal py-2 border-b-2 border-Lightgrayishblue">
+        <summary class="summary list-none text-Darkgrayishblue group">
+          <p class="inline-flex cursor-pointer items-center space-x-6">
+            <span class="question">How many team members can I invite?</span>
+            <span>
+              <img
+                class="arrow"
+                src="./Assets/icon-arrow-down.png"
+                alt="arrow-down"
+              />
+            </span>
+          </p>
+        </summary>
+        <p class="text-Darkgrayishblue">
+          You can invite up to 2 additional users on the Free plan. There is no
+          limit on team members for the Premium plan.
+        </p>
+      </details>
+
+      <details class="font-normal py-2 border-b-2 border-Lightgrayishblue">
+        <summary class="list-none text-Darkgrayishblue">
+          <p class="inline-flex cursor-pointer items-center space-x-6">
+            <span class="question">What is the maximum file upload size?</span>
+            <span>
+              <img
+                class="arrow"
+                src="./Assets/icon-arrow-down.png"
+                alt="arrow-down"
+              />
+            </span>
+          </p>
+        </summary>
+        <p class="text-Darkgrayishblue">
+          No more than 2GB. All files in your account must fit your allotted
+          storage space.
+        </p>
+      </details>
+
+      <details class="font-normal py-2 border-b-2 border-Lightgrayishblue">
+        <summary class="list-none text-Darkgrayishblue">
+          <p class="inline-flex cursor-pointer items-center space-x-6">
+            <span class="question">How do I reset my password?</span>
+            <span>
+              <img
+                class="arrow"
+                src="./Assets/icon-arrow-down.png"
+                alt="arrow-down"
+              />
+            </span>
+          </p>
+        </summary>
+        <p class="text-Darkgrayishblue">
+          Click “Forgot password” from the login page or “Change password” from
+          your profile page. A reset link will be emailed to you.
+        </p>
+      </details>
+
+      <details class="font-normal py-2 border-b-2 border-Lightgrayishblue">
+        <summary class="list-none text-Darkgrayishblue">
+          <p class="inline-flex cursor-pointer items-center space-x-6">
+            <span class="question">Can I cancel my subscription?</span>
+            <span>
+              <img
+                class="arrow"
+                src="./Assets/icon-arrow-down.png"
+                alt="arrow-down"
+              />
+            </span>
+          </p>
+        </summary>
+        <p class="text-Darkgrayishblue">
+          Yes! Send us a message and we’ll process your request no questions
+          asked.
+        </p>
+      </details>
+
+      <details class="font-normal py-2 border-b-2 border-Lightgrayishblue">
+        <summary class="list-none text-Darkgrayishblue">
+          <p class="inline-flex cursor-pointer items-center space-x-6">
+            <span class="question">Do you provide additional support?</span>
+            <span>
+              <img
+                class="arrow"
+                src="./Assets/icon-arrow-down.png"
+                alt="arrow-down"
+              />
+            </span>
+          </p>
+        </summary>
+        <p class="text-Darkgrayishblue">
+          Chat and email support is available 24/7. Phone lines are open during
+          normal business hours.
+        </p>
+      </details>
+    </article>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

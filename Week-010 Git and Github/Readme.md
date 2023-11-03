@@ -16,8 +16,8 @@
 
 ## Question 4: Briefly explain what GitHub is and how it facilitates collaboration and version control also name some alternatives to GitHub.
 
-![Question  Screenshot](Screenshots/4.png)
+![Question  Screenshot](Screenshots/Q4.png)
 
 ## Question 5: Describe the process of contributing to any open-source project on GitHub in a step-by-step manner.
 
-![Question 5 Screenshot](Screenshots/5.png)
+![Question 5 Screenshot](Screenshots/Q5.png)

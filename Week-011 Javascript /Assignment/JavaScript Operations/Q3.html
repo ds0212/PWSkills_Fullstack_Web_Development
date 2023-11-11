@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Operators</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      section {
+        margin: 20px;
+        max-width: 400px;
+      }
+
+      code {
+        display: block;
+        white-space: pre-wrap;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Unary, Binary, and Ternary Operators in JavaScript</h1> -->
+
+    <section>
+      <h2>Unary Operators:</h2>
+      <p>Unary operators operate on a single operand.</p>
+      <code>
+        &lt;script&gt; let num = 5; num++; // Unary Increment (Postfix)
+        console.log(num); // Outputs 6 ++num; // Unary Increment (Prefix)
+        console.log(num); // Outputs 7 num--; // Unary Decrement (Postfix)
+        console.log(num); // Outputs 6 --num; // Unary Decrement (Prefix)
+        console.log(num); // Outputs 5 &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Binary Operators:</h2>
+      <p>Binary operators operate on two operands.</p>
+      <code>
+        &lt;script&gt; let operand1 = 10; let operand2 = 5; let addition =
+        operand1 + operand2; // Binary Addition console.log(addition); //
+        Outputs 15 let subtraction = operand1 - operand2; // Binary Subtraction
+        console.log(subtraction); // Outputs 5 let multiplication = operand1 *
+        operand2; // Binary Multiplication console.log(multiplication); //
+        Outputs 50 let division = operand1 / operand2; // Binary Division
+        console.log(division); // Outputs 2 &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Ternary Operator:</h2>
+      <p>
+        The ternary operator is a shorthand for an 'if-else' statement and
+        operates on three operands.
+      </p>
+      <code>
+        &lt;script&gt; let age = 18; let eligibility = (age >= 18) ? 'Eligible'
+        : 'Not Eligible'; // Ternary Operator console.log(eligibility);
+        &lt;/script&gt;
+      </code>
+    </section>
+  </body>
+</html>

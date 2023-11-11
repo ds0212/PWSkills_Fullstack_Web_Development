@@ -1,0 +1,76 @@
+<!-- Question 5: Explain the importance of comments in JavaScript and provide examples of single-line and multi-line comments.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 10px;
+      }
+    </style>
+    <title>JavaScript Comments</title>
+  </head>
+  <body style="margin: 0; padding: 0">
+    <h1>Understanding the Importance of Comments in JavaScript</h1>
+
+    <section>
+      <h2>Why Use Comments:</h2>
+      <p>
+        Comments in JavaScript are used to provide additional information about
+        the code. They are not executed by the JavaScript engine and are ignored
+        during runtime. Comments are crucial for:
+      </p>
+      <ul>
+        <li>Explaining complex code logic.</li>
+        <li>Documenting the purpose of functions and variables.</li>
+        <li>Helping other developers understand your code.</li>
+        <li>Aiding in debugging and troubleshooting.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Examples of Comments:</h2>
+
+      <h3>Single-Line Comment:</h3>
+      <p>
+        Single-line comments are created using two forward slashes
+        (<code>//</code>), and they comment out the rest of the line.
+      </p>
+
+      <pre style="padding: 0">
+             <code>
+                 &lt;script&gt;
+                     // This is a single-line comment
+                     let variableA = 10; // You can also add a comment at the end of a line
+ 
+                     // This variable stores the user's name
+                     let userName = "John";
+                 &lt;/script&gt;
+             </code>
+         </pre>
+
+      <h3>Multi-Line Comment:</h3>
+      <p style="margin-top: 0; padding: 0">
+        Multi-line comments are enclosed between <code>/*</code> and
+        <code>*/</code> and can span across multiple lines.
+      </p>
+
+      <pre>
+             <code>
+                 &lt;script&gt;
+                     /*
+                         This is a multi-line comment
+                         It can provide detailed explanations about a block of code
+                     */
+                     
+                     function addNumbers(a, b) {
+                         // This function adds two numbers
+                         return a + b;
+                     }
+                 &lt;/script&gt;
+             </code>
+         </pre>
+    </section>
+  </body>
+</html>

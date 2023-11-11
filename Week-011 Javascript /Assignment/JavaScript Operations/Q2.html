@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Operators Categorization</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      section {
+        margin: 20px;
+        max-width: 300px;
+      }
+
+      code {
+        display: block;
+        white-space: pre-wrap;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>JavaScript Operators Categorization</h1> -->
+
+    <section>
+      <h2>Arithmetic Operators:</h2>
+      <code>
+        &lt;script&gt; let num1 = 10;<br />
+        let num2 = 5; <br />
+        let addition = num1 + num2; // Addition <br />
+        let subtraction = num1 - num2; // Subtraction <br />
+        let multiplication = num1 * num2; // Multiplication<br />
+        let division = num1 / num2; // Division<br />
+        let modulus = num1 % num2; // Modulus (remainder after division) <br />
+        console.log(addition, subtraction, multiplication, division, modulus);
+        &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Assignment Operators:</h2>
+      <code>
+        &lt;script&gt; let x = 10; x += 5; // Equivalent to: x = x + 5
+        console.log(x); // Outputs 15 x -= 3; // Equivalent to: x = x - 3
+        console.log(x); // Outputs 12 &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Comparison Operators:</h2>
+      <code>
+        &lt;script&gt; let a = 10; let b = 5; let isEqual = a === b; // Strict
+        equality let isNotEqual = a !== b; // Strict inequality let
+        isGreaterThan = a > b; // Greater than let isLessThan = a < b; // Less
+        than console.log(isEqual, isNotEqual, isGreaterThan, isLessThan);
+        &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Logical Operators:</h2>
+      <code>
+        &lt;script&gt; let x = true; let y = false; let andResult = x && y; //
+        Logical AND let orResult = x || y; // Logical OR let notResult = !x; //
+        Logical NOT console.log(andResult, orResult, notResult); &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Unary Operators:</h2>
+      <code>
+        &lt;script&gt; let num = 5; num++; // Increment by 1 console.log(num);
+        // Outputs 6 num--; // Decrement by 1 console.log(num); // Outputs 5
+        &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Ternary Operator:</h2>
+      <code>
+        &lt;script&gt; let age = 18; let eligibility = (age >= 18) ? 'Eligible'
+        : 'Not Eligible'; console.log(eligibility); &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Bitwise Operators:</h2>
+      <code>
+        &lt;script&gt; let num1 = 5; // Binary: 0101 let num2 = 3; // Binary:
+        0011 let bitwiseAnd = num1 & num2; // Bitwise AND let bitwiseOr = num1 |
+        num2; // Bitwise OR let bitwiseXor = num1 ^ num2; // Bitwise XOR
+        console.log(bitwiseAnd, bitwiseOr, bitwiseXor); &lt;/script&gt;
+      </code>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Precedence and Associativity in JavaScript</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      section {
+        margin: 20px;
+        max-width: 600px;
+      }
+
+      code {
+        display: block;
+        white-space: pre-wrap;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Operator Precedence and Associativity in JavaScript</h1> -->
+
+    <section>
+      <h2>Operator Precedence:</h2>
+      <p>
+        Works with BODMAS RULE. Operator precedence determines the order in
+        which operators are evaluated when multiple operators are used in the
+        same expression.
+      </p>
+      <code>
+        &lt;script&gt; let result = 2 + 3 * 4; // Multiplication has higher
+        precedence console.log(result); // Outputs 14 &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Operator Associativity:</h2>
+      <p>
+        Operator associativity defines the order in which operators of the same
+        precedence are evaluated. It can be left-to-right or right-to-left.
+      </p>
+      <code>
+        &lt;script&gt; let result = 5 - 3 + 1; // Left-to-right associativity
+        console.log(result); // Outputs 3 let result2 = 2 ** 3 ** 2; //
+        Right-to-left associativity for exponentiation console.log(result2); //
+        Outputs 512 &lt;/script&gt;
+      </code>
+    </section>
+
+    <section>
+      <h2>Importance of Understanding Precedence and Associativity:</h2>
+      <p>
+        Understanding operator precedence and associativity is crucial for
+        writing accurate and predictable code. It helps prevent unexpected
+        behavior and ensures that expressions are evaluated in the intended
+        order.
+      </p>
+      <ul>
+        <li>
+          <strong>Correct Calculation:</strong> Knowing the precedence prevents
+          errors in calculations by ensuring that higher-precedence operations
+          are performed first.
+        </li>
+        <li>
+          <strong>Expression Clarity:</strong> Using parentheses to explicitly
+          define the order of operations makes the code more readable and
+          reduces ambiguity.
+        </li>
+        <li>
+          <strong>Debugging:</strong> Misunderstanding precedence can lead to
+          subtle bugs, so understanding these concepts aids in debugging and
+          maintaining code.
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

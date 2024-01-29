@@ -1,51 +1,3348 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gmail</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="" />
+    <meta name="author" content="Amit Arora" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="./assets/gmail_new_logo_icon_159149.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css"
+    />
+    <title>Inbox (480) - amitarora@gmail.com - Gmail - [clone]</title>
+    <style>
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+
+        background-color: #393939;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+        background-color: #393939;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #888888;
+      }
+      @media (max-width: 768px) {
+        ::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          border-radius: 3px;
+
+          background-color: #393939;
+        }
+
+        ::-webkit-scrollbar {
+          width: 3px;
+          background-color: #393939;
+        }
+
+        ::-webkit-scrollbar-thumb {
+          border-radius: 3px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          background-color: #888888;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <nav class="w-16 bg-indigo-50 h-screen flex flex-row relative">
-      <div
-        class="absolute flex flex-col text-center justify-center items-center px-3.5 py-3.5 ml-1.5 mt-1.5 hover:bg-slate-200 hover:rounded-full"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          viewBox="0 0 24 24"
-          style=""
-          class="w-[24px] h-[24px]"
-        >
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" style="" />
-        </svg>
+  <body
+    class="bg-bg1 text-tc2 font-rob h-screen max-h-screen w-screen max-w-full flex min-w-0 hover:transition-all hover:duration-500"
+  >
+    <!-- ─── Navbar Left ─────────────────────────────────── ✣ ─ -->
+    <nav
+      class="hidden sm:flex flex-col items-center lg:w-16 w-10 bg-bg2 opacity-90"
+    >
+      <!-- ─── 3-bars ──────────────────────────────── ✣ ─ -->
+      <div class="flex justify-center h-16 items-center">
+        <i
+          class="fa fa-bars lg:text-lg text-sm p-4 rounded-full max-w-min hover:bg-bg3 opacity-90"
+        ></i>
       </div>
-      <div class="">
-        <div class="">
+      <!-- ─── Icon-sections ───────────────── ✣ ─ -->
+      <div class="flex flex-col gap-3">
+        <!-- ─── Mail ────────────────────────── ✣ ─ -->
+        <div
+          class="mt-4 flex flex-col gap-0.5 justify-center items-center relative cursor-pointer"
+        >
+          <img
+            src="./assets/mail_fill_white_20dp.png"
+            alt=""
+            class="lg:px-4 lg:py-2 px-2 py-1 lg:w-14 w-8 rounded-full bg-tc1"
+          />
+          <p
+            class="absolute -top-1 -right-0 lg:-right-1 lg:text-[10px] text-[8px] lg:px-1.5 px-0.5 font-semibold m-auto rounded-full border border-white bg-red-700"
+          >
+            99+
+          </p>
+          <p class="lg:text-xs text-[10px]">Mail</p>
+        </div>
+        <!-- ─── Chat ────────────────────────── ✣ ─ -->
+        <div
+          class="flex flex-col gap-0.5 justify-center items-center relative cursor-pointer"
+        >
+          <img
+            src="./assets/chat_bubble_white_20dp.png"
+            alt=""
+            class="lg:px-4 lg:py-2 px-2 py-1 lg:w-14 w-8 rounded-full hover:bg-bg3"
+          />
+
+          <p class="lg:text-xs text-[10px]">Chat</p>
+        </div>
+        <!-- ─── Spaces ────────────────────────── ✣ ─ -->
+        <div
+          class="flex flex-col gap-0.5 justify-center items-center relative cursor-pointer"
+        >
+          <img
+            src="./assets/gmail_groups_white_20dp.png"
+            alt=""
+            class="lg:px-4 lg:py-2 px-2 py-1 lg:w-14 w-8 rounded-full hover:bg-bg3"
+          />
+
+          <p class="lg:text-xs text-[10px]">Spaces</p>
+        </div>
+        <!-- ─── Spaces ────────────────────────── ✣ ─ -->
+        <div
+          class="flex flex-col gap-0.5 justify-center items-center relative cursor-pointer"
+        >
+          <img
+            src="./assets/meet_white_20dp.png"
+            alt=""
+            class="lg:px-4 lg:py-2 px-2 py-1 lg:w-14 w-8 rounded-full hover:bg-bg3"
+          />
+
+          <p class="lg:text-xs text-[10px]">Meet</p>
+        </div>
+      </div>
+    </nav>
+    <!-- ─── Main Section ────────────────────────────────── ✣ ─ -->
+    <div class="flex-1 flex flex-col min-w-0 max-h-screen sm:ml-4">
+      <!-- ─── Navbar top ──────────────────────────────────────────────── ✣ ─ -->
+      <nav class="lg:text-md text-xs flex justify-between h-fit">
+        <!-- ─── Menu And Logo ───────────────────────────────────────── ✣ ─ -->
+        <div
+          class="flex items-center justify-start pl-2 sm:pr-4 pr-2 pt-1 gap-3 lg:min-w-[250px] sm:min-w-[200px] sm:w-1/5 min-w-[72px]"
+        >
+          <div class="flex justify-center items-center">
+            <img
+              src="./assets/logo-gmail.png"
+              alt=""
+              class="lg:w-full w-16 h-full opacity-90"
+            />
+          </div>
+          <!-- ─── Menu And Logo End ───────────── ✣ ─ -->
+        </div>
+        <!-- ─── Search Bar container ──────────────────────────────────────────── ✣ ─ -->
+        <div class="flex-1 sm:px-2 py-2 flex sm:justify-start justify-center">
+          <!-- ─── Search bar+ Icons ─────────────────── ✣ ─ -->
           <div
-            class="mt-20 flex flex-col text-center justify-center items-center px-3.5 py-2.5 ml-1.5 mt-1.5 hover:bg-slate-200 hover:rounded-full"
+            class="relative rounded-full bg-bg2 flex items-center px-2 lg:w-4/5 md:w-5/6 w-full"
+          >
+            <!-- ─── Search Icon ─────────────────── ✣ ─ -->
+            <div
+              class="px-2 flex justify-center items-center rounded-full hover:bg-zinc-500 cursor-pointer"
+            >
+              <i class="fa fa-search lg:text-base text-[10px]"></i>
+            </div>
+            <!-- ─── Input ───────────────────────── ✣ ─ -->
+            <input
+              type="text"
+              class="px-2 lg:py-3 py-1.5 flex-1 bg-bg2 border-0 outline-0 lg:text-base text-[10px] w-[96px]"
+              placeholder="Search for mail"
+            />
+            <!-- ─── Settings icon────────────── ✣ ─ -->
+            <div
+              class="px-2 flex justify-center items-center rounded-full hover:bg-zinc-500 cursor-pointer"
+            >
+              <i class="fa fa-sliders lg:text-base text-[10px]"></i>
+            </div>
+            <!-- ─── Search Bar+ Icons ends───── ✣ ─ -->
+          </div>
+          <!-- ─── Search Bar Container ends────────────────── ✣ ─ -->
+        </div>
+        <!-- ─── Right Icons ─────────────────────────── ✣ ─ -->
+        <div
+          class="flex justify-end gap-2 md:gap-3 lg:gap-5 sm:px-5 px-3 items-center"
+        >
+          <!-- ─── Help Icon ───────────────────── ✣ ─ -->
+          <div
+            class="lg:w-6 w-4 lg:min-w-[24px] sm:min-w-[16px] hidden sm:block"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="20"
-              viewBox="0 -960 960 960"
-              width="20"
+              class="h-full w-full cursor-pointer"
+              viewBox="0 0 24 24"
+              fill="currentColor"
               focusable="false"
-              class="hover:bg-slate-200 hover:rounded-sm"
             >
+              <path fill="none" d="M0 0h24v24H0z"></path>
               <path
-                d="M168-192q-29.7 0-50.85-21.162Q96-234.324 96-264.04v-432.243Q96-726 117.15-747T168-768h385q-2 17-1 35.5t6 36.5H168l312 179 140-81q14 13 37 24t41 16L480-432 168-611v347h624v-294.456Q812-563 829.5-572.5T864-594v329.771Q864-234 842.5-213T792-192H168Zm0-504v432-432Zm576 72q-50 0-85-35t-35-85q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35Z"
-              />
+                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+              ></path>
             </svg>
           </div>
-          <p class="text-xs text-center ml-1.5 -mt-1.5">Mail</p>
+          <!-- ─── Settings Icon ───────────────── ✣ ─ -->
+          <svg
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            class="cursor-pointer lg:w-6 w-4 lg:min-w-[24px] min-w-[16px]"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z"
+            ></path>
+            <circle cx="12" cy="12" r="3.5"></circle>
+          </svg>
+          <!-- ─── Apps Icon ───────────────────── ✣ ─ -->
+          <svg
+            class="lg:w-6 w-4 lg:min-w-[24px] sm:min-w-[16px] cursor-pointer hidden sm:block"
+            fill="currentColor"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"
+            ></path>
+          </svg>
+          <!-- ─── Dp ──────────────────────────── ✣ ─ -->
+          <div
+            class="lg:w-10 w-6 border-[3px] rounded-full border-t-red-600 border-l-orange-400 border-b-green-700 border-r-blue-700"
+          >
+            <img
+              src="./assets/dp.jpg"
+              alt=""
+              class="w-full rounded-full cursor-pointer"
+            />
+          </div>
         </div>
+      </nav>
+      <!-- ─── resr of it ───────────────────────────── ✣ ─ -->
+      <section
+        class="flex-1 flex min-w-0 justify-between overflow-hidden relative"
+      >
+        <!-- ─── Left Side Bar ───────────────────────── ✣ ─ -->
+        <aside
+          class="lg:min-w-[250px] sm:min-w-[200px] group hover:min-w-[200px] lg:hover:min-w-[250px] bg-bg1 flex flex-col overflow-auto ml-2 relative z-20 hover:absolute hover:sm:relative"
+        >
+          <!-- ─── Compose ─────────────────────────────── ✣ ─ -->
+          <div
+            class="flex lg:py-[18px] Lg:pl-4 Lg:pr-6 py-[12px] pl-5 pr-5 bg-white border tracking-normal font-medium text-tc1 text-sm rounded-2xl mt-3 mb-4 items-center justify-center lg:gap-4 gap-2 w-fit"
+          >
+            <i class="fa fa-pencil text-lg"></i>
+            <p class="hidden group-hover:block sm:block">Compose</p>
+          </div>
+          <!-- ─── Folders List ────────────────────────── ✣ ─ -->
+          <div
+            class="flex flex-col lg:text-sm text-xs overflow-auto pb-10 group-hover:min-w-max sm:min-w-max"
+          >
+            <!-- ─── Inbox ───────────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 font-semibold cursor-pointer tracking-wide gap-4 mr-1 items-center justify-center rounded-full bg-bg3 h-8 min-h-[2rem]"
+            >
+              <img src="./assets/inbox.png" alt="" class="opacity-80" />
+              <p class="hidden group-hover:block sm:block flex-1 opacity-95">
+                Inbox
+              </p>
+              <p
+                class="hidden group-hover:block sm:block justify-self-end opacity-90 lg:text-xs text-[10px]"
+              >
+                480
+              </p>
+            </div>
+            <!-- ─── Starred ─────────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] tracking-wide gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img src="./assets/star.png" alt="" class="opacity-80" />
+              <p class="hidden group-hover:block sm:block flex-1 opacity-90">
+                Starred
+              </p>
+            </div>
+            <!-- ─── Snoozed ─────────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] tracking-wide gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img src="./assets/clock.png" alt="" class="opacity-80" />
+              <p class="hidden group-hover:block sm:block flex-1 opacity-90">
+                Snoozed
+              </p>
+            </div>
+            <!-- ─── Important ───────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] tracking-wide gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img src="./assets/imp.png" alt="" class="" />
+              <p class="hidden group-hover:block sm:block flex-1 opacity-90">
+                Important
+              </p>
+            </div>
 
-        <div></div>
-        <div></div>
-      </div>
-    </nav>
+            <!-- ─── Sent ────────────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 sm cursor-pointer min-h-[2rem] tracking-wider gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img src="./assets/sent.png" alt="" class="opacity-80" />
+              <p class="hidden group-hover:block sm:block flex-1 opacity-90">
+                Sent
+              </p>
+            </div>
+            <!-- ─── Drafts ──────────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/draft_white_20dp.png"
+                alt=""
+                class="opacity-80"
+              />
+              <p
+                class="hidden group-hover:block sm:block flex-1 opacity-95 font-semibold tracking-wide"
+              >
+                Drafts
+              </p>
+              <p
+                class="hidden group-hover:block sm:block justify-self-end lg:text-xs text-[10px] opacity-90"
+              >
+                15
+              </p>
+            </div>
+            <!-- ─── All Mail ────────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] tracking-wide gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/stacked_email_white_20dp.png"
+                alt=""
+                class="opacity-80"
+              />
+              <p class="hidden group-hover:block sm:block flex-1 opacity-90">
+                All Mail
+              </p>
+            </div>
+            <!-- ─── Spam ────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/report_white_20dp.png"
+                alt=""
+                class="opacity-80"
+              />
+              <p
+                class="hidden group-hover:block sm:block flex-1 font-semibold tracking-wide opacity-95"
+              >
+                Spam
+              </p>
+              <p
+                class="hidden group-hover:block sm:block justify-self-end lg:text-xs text-[10px] opacity-90"
+              >
+                115
+              </p>
+            </div>
+            <!-- ─── Trash ───────────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] tracking-wide gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/delete_white_20dp.png"
+                alt=""
+                class="opacity-80"
+              />
+              <p class="hidden group-hover:block sm:block flex-1 opacity-90">
+                Trash
+              </p>
+            </div>
+            <!-- ─── Categories ──────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8 relative"
+            >
+              <img
+                src="./assets/label_white_20dp.png"
+                alt=""
+                class="relative opacity-80"
+              />
+              <img
+                src="./assets/arrow_right_white_20dp.png"
+                alt=""
+                class="absolute -left-1 opacity-80"
+              />
+              <p
+                class="hidden group-hover:block sm:block flex-1 tracking-wide font-semibold opacity-95"
+              >
+                Categories
+              </p>
+            </div>
+            <!-- ─── More ────────────────────────── ✣ ─ -->
+            <div
+              class="flex px-3 cursor-pointer min-h-[2rem] tracking-wide gap-4 mr-1 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/expand_more_white_20dp.png"
+                alt=""
+                class="opacity-80"
+              />
+              <p class="hidden group-hover:block sm:block flex-1 opacity-90">
+                More
+              </p>
+            </div>
+            <!-- ─── Labels ──────────────────────── ✣ ─ -->
+            <div
+              class="flex sm:pl-4 pl-2 pr-3 opacity-95 text-sm lg:text-base font-medium cursor-pointer min-h-[2rem] tracking-wider gap-4 mt-6 mb-2 mr-0 items-center"
+            >
+              <p class="flex-1">Labels</p>
+              <div
+                class="lg:h-9 lg:w-9 h-8 w-8 rounded-full p-2 hover:bg-zinc-500 cursor-pointer hidden group-hover:block"
+              >
+                <img
+                  src="./assets/plus.png"
+                  alt=""
+                  class="sm:block w-full h-full"
+                />
+              </div>
+            </div>
+            <!-- ─── Imapdrafts ──────────────────── ✣ ─ -->
+            <div
+              class="flex group/dots pl-4 pr-0 opacity-90 cursor-pointer min-h-[2rem] gap-4 mr-3 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/label_gm_grey_24dp.png"
+                alt=""
+                class="brightness-200 w-5"
+              />
+              <p class="hidden group-hover:block sm:block flex-1">
+                [Imap]/Drafts
+              </p>
+              <div
+                class="h-8 w-8 rounded-full p-1 hover:bg-zinc-500 cursor-pointer hidden group-hover/dots:block"
+              >
+                <img
+                  src="./assets/more_vert_white_20dp.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+            <!-- ─────────────[Imap]/Sent────────────────────── ✣ ─ -->
+            <div
+              class="flex group/dots pl-4 pr-0 opacity-90 cursor-pointer min-h-[2rem] gap-4 mr-3 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/label_gm_grey_24dp.png"
+                alt=""
+                class="brightness-200 w-5"
+              />
+              <p class="hidden group-hover:block sm:block flex-1">
+                [Imap]/Sent
+              </p>
+              <div
+                class="h-8 w-8 rounded-full p-1 hover:bg-zinc-500 cursor-pointer hidden group-hover/dots:block"
+              >
+                <img
+                  src="./assets/more_vert_white_20dp.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+            <!-- ─────────────────────[Imap]/Trash────────────── ✣ ─ -->
+            <div
+              class="flex group/dots pl-4 pr-0 opacity-90 cursor-pointer min-h-[2rem] gap-4 mr-3 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/label_gm_grey_24dp.png"
+                alt=""
+                class="brightness-200 w-5"
+              />
+              <p class="hidden group-hover:block sm:block flex-1">
+                [Imap]/Trash
+              </p>
+              <div
+                class="h-8 w-8 rounded-full p-1 hover:bg-zinc-500 cursor-pointer hidden group-hover/dots:block"
+              >
+                <img
+                  src="./assets/more_vert_white_20dp.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+            <!-- ─── Accounts ────────────────────── ✣ ─ -->
+            <div
+              class="flex group/dots pl-4 pr-0 opacity-90 cursor-pointer min-h-[2rem] gap-4 mr-3 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/label_gm_grey_24dp.png"
+                alt=""
+                class="brightness-200 w-5"
+              />
+              <p class="hidden group-hover:block sm:block flex-1">Accounts</p>
+              <div
+                class="h-8 w-8 rounded-full p-1 hover:bg-zinc-500 cursor-pointer hidden group-hover/dots:block"
+              >
+                <img
+                  src="./assets/more_vert_white_20dp.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+            <!-- ─── Personal ────────────────────── ✣ ─ -->
+            <div
+              class="flex group/dots pl-4 pr-0 opacity-90 cursor-pointer min-h-[2rem] gap-4 mr-3 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/label_gm_grey_24dp.png"
+                alt=""
+                class="brightness-200 w-5"
+              />
+              <p class="hidden group-hover:block sm:block flex-1">Personal</p>
+              <div
+                class="h-8 w-8 rounded-full p-1 hover:bg-zinc-500 cursor-pointer hidden group-hover/dots:block"
+              >
+                <img
+                  src="./assets/more_vert_white_20dp.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+            <!-- ────────Buisness─────────────────────────── ✣ ─ -->
+            <div
+              class="flex group/dots pl-4 pr-0 opacity-90 cursor-pointer min-h-[2rem] gap-4 mr-3 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/label_gm_grey_24dp.png"
+                alt=""
+                class="brightness-200 w-5"
+              />
+              <p class="hidden group-hover:block sm:block flex-1">Buisness</p>
+              <div
+                class="h-8 w-8 rounded-full p-1 hover:bg-zinc-500 cursor-pointer hidden group-hover/dots:block"
+              >
+                <img
+                  src="./assets/more_vert_white_20dp.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+            <!-- ────────Office─────────────────────────── ✣ ─ -->
+            <div
+              class="flex group/dots pl-4 pr-0 opacity-90 cursor-pointer min-h-[2rem] gap-4 mr-3 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/label_gm_grey_24dp.png"
+                alt=""
+                class="brightness-200 w-5"
+              />
+              <p class="hidden group-hover:block sm:block flex-1">Office</p>
+              <div
+                class="h-8 w-8 rounded-full p-1 hover:bg-zinc-500 cursor-pointer hidden group-hover/dots:block"
+              >
+                <img
+                  src="./assets/more_vert_white_20dp.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+            <!-- ────────Reciepts─────────────────────────── ✣ ─ -->
+            <div
+              class="flex group/dots pl-4 opacity-90 pr-0 cursor-pointer min-h-[2rem] gap-4 mr-3 items-center justify-center rounded-full hover:bg-bg4 h-8"
+            >
+              <img
+                src="./assets/label_gm_grey_24dp.png"
+                alt=""
+                class="brightness-200 w-5"
+              />
+              <p class="hidden group-hover:block sm:block flex-1">Reciepts</p>
+              <div
+                class="h-8 w-8 rounded-full p-1 hover:bg-zinc-500 cursor-pointer hidden group-hover/dots:block"
+              >
+                <img
+                  src="./assets/more_vert_white_20dp.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- ─── Inbox + Right Sidebar ───────────────── ✣ ─ -->
+        <main class="flex flex-1 min-w-0 overflow-hidden">
+          <!-- ─── Inbox ───────────────────────── ✣ ─ -->
+          <div
+            class="min-w-0 flex-1 flex flex-col overflow-hidden rounded-2xl ml-2 mr-2 mb-2 sm:mb-4 bg-bg2"
+          >
+            <!-- ─── Head ────────── ✣ ─ -->
+            <div class="rounded-t-2xl flex flex-col gap-6 px-2">
+              <!-- ─── Top Line ────────────────────────────────────────────────────── ✣ ─ -->
+              <div
+                class="hidden sm:flex sm:justify-end lg:justify-between pl-4 sm:pt-1 lg:pt-2"
+              >
+                <!-- ─── Check refresh dots────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden lg:flex items-center opacity-70">
+                  <div
+                    class="p-2 flex justify-center items-center hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div class="p-1 hover:bg-bg3 hover:cursor-pointer">
+                    <img
+                      src="./assets/arrow_drop_down_white_20dp.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <!-- ─── refresh────────────────────────────────────────────────────── ✣ ─ -->
+                  <div class="mx-5 p-1 hover:bg-bg3">
+                    <img
+                      src="./assets/refresh_white_20dp.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                  <!-- ─── dots────────────────────────────────────────────────────── ✣ ─ -->
+                  <div class="p-1 hover:bg-bg3">
+                    <img
+                      src="./assets/more_vert_white_20dp.png"
+                      alt=""
+                      class=""
+                    />
+                  </div>
+                </div>
+                <!-- ─── mail count + split────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="flex items-center gap-5 justify-center">
+                  <p class="sm:text-xs lg:text-sm opacity-70">1-50 of 52,433</p>
+                  <i
+                    class="fa fa-chevron-left opacity-30 sm:text-xs lg:text-sm"
+                  ></i>
+                  <div class="p-1 px-2 hover:bg-bg3">
+                    <i class="fa fa-chevron-right sm:text-xs lg:text-sm"></i>
+                  </div>
+                  <div class="hidden lg:flex">
+                    <div class="p-1 hover:bg-bg3">
+                      <img
+                        src="./assets/vertical_split_white_20dp.png"
+                        alt=""
+                        class="opacity-70"
+                      />
+                    </div>
+                    <img
+                      src="./assets/arrow_drop_down_white_20dp.png"
+                      alt=""
+                      class="opacity-70 hover:bg-bg3"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- ─── categories────────────────────────────────────────────────────── ✣ ─ -->
+              <div class="hidden sm:flex border-b border-zinc-500">
+                <div class="sm:flex w-max md:w-5/6">
+                  <!-- ─── Primary────────────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex items-center md:flex-1 sm:gap-1 lg:gap-3 border-b-2 sm:p-3 lg:p-5 w-max"
+                  >
+                    <img
+                      src="./assets/inbox_fill_white_20dp.png"
+                      alt=""
+                      class=""
+                    />
+                    <p class="sm:text-xs lg:text-base font-semibold">Primary</p>
+                  </div>
+                  <!-- ─── Promotions ────────────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex items-center md:flex-1 sm:gap-1 lg:gap-3 sm:p-2 lg:p-3 w-max cursor-pointer hover:bg-bg3"
+                  >
+                    <img
+                      src="./assets/sell_baseline_nv200_20dp.png"
+                      alt=""
+                      class="opacity-60"
+                    />
+                    <div class="flex gap-4 items-baseline w-max">
+                      <p
+                        class="sm:text-xs lg:text-base font-semibold opacity-60"
+                      >
+                        Promotions
+                      </p>
+                    </div>
+                  </div>
+                  <!-- ─── social ────────────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex items-center md:flex-1 sm:gap-1 lg:gap-3 cursor-pointer sm:p-3 lg:p-5 hover:bg-bg3"
+                  >
+                    <img
+                      src="./assets/group_baseline_nv200_20dp.png"
+                      alt=""
+                      class="opacity-60"
+                    />
+                    <div class="flex gap-4 items-baseline">
+                      <p
+                        class="sm:text-xs lg:text-base font-semibold opacity-60"
+                      >
+                        Social
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ─── Inbox Contnr ──── ✣ ─ -->
+            <div class="w-full flex flex-col min-w-0 overflow-auto">
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      LinkedIN
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Kotak Bank
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ──────Read Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg4 opacity-70 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Microsoft Newsletter
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ──────imp Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img
+                      src="./assets/imp-yellow.png"
+                      alt=""
+                      class="min-w-[20px]"
+                    />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Amanpreet Singh
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ──────imp read Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg4 opacity-70 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img
+                      src="./assets/imp-yellow.png"
+                      alt=""
+                      class="min-w-[20px]"
+                    />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Pw Skills
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      bbDaily OFfers
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      PayTm
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      BookMyShow
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ──────Read  Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg4 opacity-70 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Zomato
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg4 opacity-70 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Swiggy
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      RedHat
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      GooglePay
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Cred
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      SBI Cards
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      IDFC Bank
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Amazon
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Flipkart
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      ComicVerse
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Disney Hotstar
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Netflix
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      LinkedIN
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Kotak Bank
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Microsoft Newsletter
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      bbDaily OFfers
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      PayTm
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      BookMyShow
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Zomato
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Swiggy
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      RedHat
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Amanpreet Singh
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Pw Skills
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      GooglePay
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Cred
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      SBI Cards
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      IDFC Bank
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Amazon
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Flipkart
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      ComicVerse
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Disney Hotstar
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ────── Mail ───────────── ✣ ─ -->
+              <div
+                class="flex flex-col w-full min-w-0 px-2 py-1 bg-bg2 border-b border-zinc-600 lg:flex-row lg:justify-between cursor-pointer hover:shadow-shd hover:z-10"
+              >
+                <!-- ─── Buttons ─────────────────────────────────────────────────────── ✣ ─ -->
+                <div class="hidden px-4 lg:flex self-end">
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <input
+                      type="checkbox"
+                      name=""
+                      id=""
+                      class="h-[14px] w-[14px]"
+                    />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/star.png" alt="" class="min-w-[20px]" />
+                  </div>
+                  <div
+                    class="p-2 flex justify-center items-center rounded-full hover:bg-bg3 hover:cursor-pointer"
+                  >
+                    <img src="./assets/imp.png" alt="" class="min-w-[20px]" />
+                  </div>
+                </div>
+                <!-- ─── Sender sub Body + Time ────────────────────────────────────────── ✣ ─ -->
+                <div
+                  class="flex flex-1 justify-between items-center min-w-0 border-red-400"
+                >
+                  <!-- ─── Sender Sub Body ─────────────────────────────────────────────── ✣ ─ -->
+                  <div
+                    class="flex flex-col sm:flex-row sm:items-baseline min-w-0 border-green-400"
+                  >
+                    <!-- ─── Mail From ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-xs font-semibold sm:min-w-[140px] lg:min-w-[200px] sm:w-1/3 sm:max-w-[150px] lg:max-w[250px] lg:text-sm border-yellow-300"
+                    >
+                      Netflix
+                    </p>
+                    <!-- ─── Mail Subject ────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs font-semibold min-w-0 truncate lg:font-medium sm:text-xs lg:text-sm border-blue-600"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <!-- ─── Mail Body ───────────────────────────────────────────────────── ✣ ─ -->
+                    <p
+                      class="text-2xs text-tc2 opacity-60 min-w-0 truncate lg:text-xs"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est qui fugiat placeat doloribus perferendis deleniti
+                      officiis dolores earum totam suscipit.
+                    </p>
+                  </div>
+                  <!-- ─── time ────────────────────────────────────────────────────────── ✣ ─ -->
+                  <p
+                    class="font-medium text-2xs text-right sm:w-[10%] sm:min-w-[60px] sm:max-w-[90px] lg:text-xs border-orange-400"
+                  >
+                    10:23
+                  </p>
+                </div>
+              </div>
+              <!-- ─────────── ✣ ─ -->
+            </div>
+          </div>
+          <!-- ─── Right Side Bar ──────────────── ✣ ─ -->
+          <div class="hidden lg:w-14 w-10 pt-2 sm:flex flex-col items-center">
+            <!-- ─── Top Icons ───────────── ✣ ─ -->
+            <div
+              class="flex gap-6 flex-col items-center pb-5 border-b-zinc-600 border-b"
+            >
+              <div
+                class="lg:h-9 lg:w-9 h-8 w-8 rounded-full p-2 hover:bg-zinc-500 cursor-pointer"
+              >
+                <img src="./assets/cal.png" alt="" class="w-full h-full" />
+              </div>
+              <div
+                class="lg:h-9 lg:w-9 h-8 w-8 rounded-full p-2 hover:bg-zinc-500 cursor-pointer"
+              >
+                <img src="./assets/idea.png" alt="" class="w-full h-full" />
+              </div>
+              <div
+                class="lg:h-9 lg:w-9 h-8 w-8 rounded-full p-2 hover:bg-zinc-500 cursor-pointer"
+              >
+                <img src="./assets/task.png" alt="" class="w-full h-full" />
+              </div>
+              <div
+                class="lg:h-9 lg:w-9 h-8 w-8 rounded-full p-2 hover:bg-zinc-500 cursor-pointer"
+              >
+                <img src="./assets/contact.png" alt="" class="w-full h-full" />
+              </div>
+            </div>
+            <!-- ─── Bottom Part ─────────── ✣ ─ -->
+            <div class="flex flex-col flex-1 justify-between pb-3 pt-5">
+              <div
+                class="lg:h-9 lg:w-9 h-8 w-8 rounded-full p-2 hover:bg-zinc-500 cursor-pointer"
+              >
+                <img src="./assets/plus.png" alt="" class="w-full h-full" />
+              </div>
+              <div
+                class="lg:h-9 lg:w-9 h-8 w-8 rounded-full p-2 hover:bg-zinc-500 cursor-pointer"
+              >
+                <svg
+                  class="aT5-aOt-I-JX"
+                  version="1.1"
+                  id="Layer_1"
+                  x="0px"
+                  y="0px"
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  enable-background="new 0 0 24 24"
+                  xml:space="preserve"
+                  fill="white"
+                >
+                  <path
+                    d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"
+                  ></path>
+                  <path fill="none" d="M0,0h24v24H0V0z"></path>
+                </svg>
+              </div>
+              <!-- ─── Bottom-part-end ─────── ✣ ─ -->
+            </div>
+            <!-- ─── Right Side Bar End ──────────── ✣ ─ -->
+          </div>
+        </main>
+      </section>
+    </div>
   </body>
 </html>

@@ -3,9 +3,9 @@ function fun() {}
 
 const f = function process() {}; // Named function expresion
 
-const g = function () {}; // Anonymous funciton expression
+const g = function () {}; // Anonymous function expression
 
-const h = () => {}; // Anonymous funciton expression
+const h = () => {}; // Anonymous function expression
 
 // Iife - Immediately invoked function expression.
 (function () {})()(function exec() {})(); // IIFE function expression.
@@ -42,14 +42,14 @@ console.log(result);
 
 // 1. debugging 2. Recursion. 3. Readability.
 
-function isEvenorOdd(x) {
+function isEvenorOdd1(x) {
   console.trace("trace of the functions.");
   return x % 2 == 0;
 }
 const namedFunctionExpression = function exec() {
   const result2 = isEvenorOdd(10);
 };
-const anonFunctionExpression = function exec() {
+const anonFunctionExpression = function () {
   const resut3 = isEvenorOdd(11);
 };
 // Recursion - Call stack.

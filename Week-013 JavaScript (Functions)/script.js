@@ -41,12 +41,6 @@ func(3, 4, 7); // 14
 func(3, 4, 12, 10, 21); //
 func(3, 4, 4, 8); // 19
 
+console.log("Palindrome Problem");
 
-console.log("Palindrome Problem")
-
-let isPalin = "racecar"
-
-
-function isPalindrome(newString){
-  if
-}
+let isPalin = "racecar";
